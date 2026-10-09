@@ -1,0 +1,559 @@
+/* Importar fuente titulo */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, "Segoe UI", Roboto, sans-serif;
+    font-size: 14.5px;
+    margin: 0;
+    background-color: #f4f7fb;
+}
+
+body p, ul {
+    line-height: 1.6;
+}
+
+.contenedor {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* ASIDE */
+aside {
+    width: max(280px, 30%); /* calc/max */
+    min-height: 100vh;
+    background: linear-gradient(180deg, #96b6db 0%, #7a9fc4 100%);
+    color: white;
+    padding: 25px;
+    flex-shrink: 0;
+    overflow-y: auto;
+}
+
+aside p {
+    line-height: 1.4;
+    margin: 4px 0;
+}
+
+aside h2 {
+    font-size: 16px;
+    border-bottom: 2px solid rgba(255,255,255,0.4);
+    padding-bottom: 6px;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+aside h4 {
+    margin: 12px 0 4px 0;
+    font-size: 13px;
+    color: #e8f0fa;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Barras de konpetentzia */
+.competencia {
+    margin-bottom: 10px;
+}
+
+.competencia span {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12.5px;
+    margin-bottom: 4px;
+}
+
+.barra {
+    background-color: rgba(255,255,255,0.25);
+    border-radius: 10px;
+    height: 8px;
+    overflow: hidden;
+}
+
+.barra-nivel {
+    height: 100%;
+    background: linear-gradient(90deg, #ffffff, #d4e6ff);
+    border-radius: 10px;
+    width: 0;
+}
+
+/* Cita */
+.cita {
+    margin-top: 30px;
+    padding: 15px;
+    background: rgba(255,255,255,0.15);
+    border-left: 4px solid #ffffff;
+    border-radius: 8px;
+    font-style: italic;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.cita::before {
+    content: "«";
+}
+
+.cita::after {
+    content: "»";
+}
+
+/* Formacion */
+.formacion-item {
+    margin-bottom: 10px;
+    padding-left: 12px;
+    border-left: 2px solid rgba(255,255,255,0.4);
+}
+
+.formacion-item strong {
+    display: block;
+    font-size: 13px;
+}
+
+.formacion-item small {
+    font-size: 11.5px;
+    opacity: 0.85;
+}
+
+/* fto Nickolas*/
+.ft-cj {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto 25px auto;
+    padding: 10px;
+    background-color: #FFFFFF1F;
+    border: 1px solid #ffffff33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.ft-cj img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* HEADER */
+.encabezado {
+    position: relative;
+    overflow: hidden;
+    background-color: #163a58;
+    color: white;
+}
+
+.ft-goiburu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.15;
+}
+
+.contenido-goiburu {
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    padding: min(40px, 5vw); /* calc/min */
+    background-color: transparent;
+}
+
+.encabezado, header, main, footer {
+    width: 100%;
+    margin: 0;
+}
+
+/* Título H1 bonito hover (bien puesto)*/
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(1.5rem + 1.5vw); /* calc */
+    font-weight: 700;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #ffffff, #96b6db, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(150, 182, 219, 0.5);
+    transition: all 0.4s ease;
+    display: inline-block;
+    cursor: default;
+    margin: 10px 0;
+}
+
+header h1:hover {
+    transform: scale(1.03);
+    text-shadow: 0 0 30px rgba(150, 182, 219, 0.9), 0 0 60px rgba(8, 117, 209, 0.5);
+    letter-spacing: 4px;
+}
+
+header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* MAIN*/
+main {
+    padding: min(40px, 5vw);
+    flex: 1;
+}
+
+/* LAS 4 CAJAS */
+.cont-cajas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    width: 100%;
+}
+
+.caja {
+    background:
+        linear-gradient(#fafdff, #fafdff) padding-box,
+        linear-gradient(135deg, #0875d1, #96b6db) border-box;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 25px 18px;
+    color: #163a58; /* Luz azul difuminada alrededor */
+    box-shadow: 0 0 15px rgba(8, 117, 209, 0.25), 0 0 30px rgba(8, 117, 209, 0.1);
+    transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.caja:hover {
+    box-shadow: 0 0 25px rgba(8, 117, 209, 0.6), 0 0 50px rgba(8, 117, 209, 0.3);
+    transform: translateY(-4px);
+}
+
+.zen {
+    display: block;
+    color: #0875d1;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.caja h3 {
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0 0 6px 0;
+}
+
+.caja .sub {
+    color: #66809b;
+    margin: 0 0 14px 0;
+}
+
+.caja p {
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* TABLA DE RIVALES */
+.tabla-rivales {
+    margin-top: calc(30px + 1vw); /* calc */
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.tabla-rivales caption {
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #163a58;
+    margin-bottom: 12px;
+    padding-left: 5px;
+}
+
+.tabla-rivales th {
+    background: linear-gradient(135deg, #163a58, #0875d1);
+    color: white;
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tabla-rivales td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #e3edf7;
+    font-size: 13.5px;
+    color: #2c3e50;
+    transition: background 0.3s ease, padding-left 0.3s ease;
+}
+
+.tabla-rivales tbody tr:hover {
+    background: linear-gradient(90deg, #eaf4ff, #f8fbff);
+}
+
+.tabla-rivales tbody tr:hover td {
+    padding-left: 22px;
+    color: #0875d1;
+    font-weight: 500;
+}
+
+.tabla-rivales tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* resultado */
+.resultado {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11.5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.irabazi {
+    background: #d4f5e0;
+    color: #0a7a3e;
+}
+
+.galdu {
+    background: #ffe0e0;
+    color: #b32d2d;
+}
+
+.erabakigarri {
+    background: #fff3cd;
+    color: #8a6d00;
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(135deg, #163a58, #0d2438);
+    color: #c8d8e8;
+    padding: 40px min(40px, 5vw) 20px;
+    margin-top: auto;
+}
+
+.footer-contenido {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-col h4 {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.footer-col h4::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: #0875d1;
+}
+
+.footer-col p, .footer-col a {
+    color: #a8bfd6;
+    font-size: 13px;
+    line-height: 1.8;
+    text-decoration: none;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    display: block;
+}
+
+.footer-col a:hover {
+    color: #96b6db;
+    padding-left: 6px;
+}
+
+.footer-redes {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.footer-redes a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    color: #c8d8e8;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.footer-redes a:hover {
+    background: #0875d1;
+    color: white;
+    transform: translateY(-3px);
+    padding-left: 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 12px;
+    color: #7a93ab;
+}
+
+.footer-bottom span {
+    color: #0875d1;
+}
+
+/* RESPONSIVE (1024px)  */
+@media (max-width: 1024px) {
+    .contenedor {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+        min-height: auto;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 20px;
+        align-items: start;
+    }
+
+    .ft-cj {
+        width: 200px;
+        height: 200px;
+        margin: 0;
+    }
+
+    .cont-cajas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-contenido {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* responsive medio (760px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    aside {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 20px 15px;
+    }
+
+    .ft-cj {
+        width: 160px;
+        height: 160px;
+        margin: 0 auto 15px auto;
+    }
+
+    aside h2 {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    aside h4 {
+        margin-bottom: 2px;
+    }
+
+    .formacion-item {
+        text-align: left;
+    }
+
+    header {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+        line-height: 1.2;
+    }
+
+    header h2 {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+    .cont-cajas {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .caja {
+        padding: 18px 15px;
+    }
+
+    .tabla-rivales {
+        font-size: 12px;
+    }
+
+    .tabla-rivales th, .tabla-rivales td {
+        padding: 10px 8px;
+    }
+
+    .footer-contenido {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-col h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-redes {
+        justify-content: center;
+    }
+
+    footer {
+        padding: 30px 15px 15px;
+    }
+}
+/* responsive movil(400px) */
+@media (max-width: 400px) {
+    h1 {
+        font-size: 19px;
+    }
+
+    .ft-cj {
+        width: 130px;
+        height: 130px;
+    }
+
+    .caja h3 {
+        font-size: 15px;
+    }
+
+    .caja p {
+        font-size: 12.5px;
+    }
+}
